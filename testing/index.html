@@ -29,8 +29,122 @@
             against those who would otherwise disagree.
         </h5>
         <h5>
-                
+            Good tests are good documentation,
+            they tell you the intent of the code.
+            A lot of people struggle on this point.
+            Mainly because they ask, "What is a good test?"
+            It all starts with the naming of a test.
+            Imagine you are writing some code about a football.
+            Now instead of writing "tests" let's just describe it for a moment.
+            It is full of air, it is a sphere, it is made of leather.
+            DONE. Now I argue, each one of those is a perfect test.
+            They tell me exactly everything I need to know and nothing else.
+            They don't tell me for example that I need to pump the ball,
+            or that the ball can be kicked and rolled.
+            They also don't tell me that isASphere returns true or that getContents return AIR.
+            Mainly because if I change the method isASphere, because it is a rubbish name, I do not change a football.
+            Hence I do not need to keep changing my documentation.
         </h5>
+        <h5>
+            Tests talk. If you haven't listened that's your own fault for writing bad code.
+            They tell you everything you need to know.
+            If you are struggling to write a test it is either because you don't know what it is you want
+            (blame your product owner/user/BA for knowing what they want)
+            or because you have already created a poor design.
+            Unfortunately the later is difficult to detect sometimes until it is too late.
+            Also when you have written a bunch of tests then you realize it is getting harder to write
+            then it can be too late to re-write everything.
+            But you should re-write everything because you have probably written something awful.
+        </h5>
+        <h5>
+            Have you ever had an argument to anyone about mocks and mocking (spies and spying)?
+            Probably because you are either doing it wrong or you more likely you have created coupling.
+            Mocks (and spies) tell you that you have coupling in your code.
+            You should either argue that this is fine and you can continue.
+            Or that you should change how you join your code and reduce the coupling.
+            More often than not you have over coupling.
+        </h5>
+        <h5>
+            It is all too often that assertions are hard to write.
+            WRONG! Side effects are hard to test.
+            If you are writing code with side effects and you haven't noticed
+            that either your tests have rubbish names, that tests are hard to write or that mocks are hard to manage!
+            Then you probably have rubbish assertions.
+            I like trying to keep my tests to have ONE assertion.
+            Why? Because everything should do one thing. Even your tests.
+        </h5>
+        <h5>
+            The second last thing which makes tests great is how granular you write them.
+            I have written server side solutions and client side solutions.
+            The later being notorious to test.
+            You can solve this by writing the write <i>kind</i> of test.
+            <b>Unit</b> tests are famous for being <i>too</i> granular.
+            You can identify these because they have too much mocking,
+            they are testing private or protected methods,
+            the sheer volume of them and they are overly complex.
+            But unit tests are useful for edge case.
+            They are quick and small. I think most developers find them easiest to write TBH.
+            <b>Integration (or service)</b> tests are good for testing certain components all hooked togeher.
+            Unit tests should mock things like Data Sources.
+            But you need to test that the data hooks up together.
+            You could check with a huge or manual test that takes a long time that the data is coming through correctly.
+            HOWEVER you could check with an intermediate test.
+            These should not test edge cases, that should be for unit tests.
+            But they are normally as quick as the integration (e.g. how long it takes for data to come back).
+            Which means that they are good.
+            The final tear of testing is end-to-end testing.
+            This is testing which starts your whole service and preferably uses real data.
+            Then it completes a journey and reports that it was a success.
+            I lied there is another tear but it is the final tear part B.
+            Manual testing. I hate manual testing where possible.
+            It is laborious and boring. I also have all these other tests which I believe to be correct.
+            If I need manual testing I probably did something wrong (or inherited some old ways of working).
+            Best thing to remember is Martin Fowler's pyramid. you have mostly unit tests, then some integration, then few end-to-end, and hopefully no manual.
+            If you have the correct level of testing and are happy with the results then you can do what you like to the code.
+            Because you know you have the correct kind of coverage.
+            If you miss out on any of the kinds of testnig.
+            Then you end up introducing more bugs.
+            We don't like bugs or imperfection and anything to mitigate this is a blessing.
+        </h5>
+        <h5>
+            The last thing that makes tests so freaking unbelievable.
+            The thing that if you take nothing else away is the following.
+            REFACTOR REFACTOR REFACTOR.
+            We do not write anything correct first time.
+            Otherwise there would be no need for the backspace button.
+            If you want to write good code you have to write bad code.
+            You then need to find confidence that you can write better code.
+            And when I say better code I mean more bad code.
+            I would argue that when you have the FINAL copy of something.
+            Just remove the tests and make it so that if anyone wants to change anything they struggle.
+        </h5>
+        <h5>
+            Everyone seems to forget that refactoring means you are happy with your tests.
+            That is don't forget to refactor your tests.
+            As I said everyone write bad code.
+            Which means you all write bad tests.
+            So don't forget to refactor them.
+            I know what you are thinking, "But I should then write tests for tests!"
+            (or "Obviously").
+            You just wrote code you know passes your tests.
+            So new tests should guarantee that old code still works.
+            So in essence your code tests your tests.
+        </h5>
+        <h5>
+            In each paragraph I think I have written something which has annoyed me.
+            Something which I have either said makes tests bad at some point.
+            Then realized that these are weaknesses but strengths.
+            And that these things are what make testing imperative and amazing.
+        </h5>
+        <h4>Summary</h4>
+        <h5>Tests are awesome</h5>
+        <h5>Written well they create amazing documentation</h5>
+        <h5>Poor tests tell you about poor design</h5>
+        <h5>Coupling is shown through poor mocking</h5>
+        <h5>Side effects are shown through poor assertions</h5>
+        <h5>Correct level of testing reduces bugs and tedious manual testing</h5>
+        <h5>All code is bad, but tests let you at least write better bad code</h5>
+        <h5>Tests are code so make sure you treat them as such</h5>
     </div>
 </body>
 
