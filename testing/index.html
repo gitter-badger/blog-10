@@ -2,60 +2,218 @@
 <html>
 
 <head>
-    <title>Testing</title>
+    <title>Talking Tests</title>
     <link rel="stylesheet" type="text/css" href="../Skeleton/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="../Skeleton/css/skeleton.css">
+    <link rel="stylesheet" type="text/css" href="../lukejpreston.css">
 </head>
 
 <body>
     <br />
     <a class="row offset-by-one ten columns button button-primary" href="..">Home</a>
     <div class="row">
-        <h1 class="row offset-by-one columns">Testing</h1>
+        <h1 class="row offset-by-one columns">The Tests Are Made For Talking</h1>
     </div>
     <div class="row offset-by-one ten columns">
-        <h5>
-            Testing seems to be something of a contentious subject as of late
-            and the amount of people who argue about it just baffles me
-        </h5>
-        <h5>
-            Testing is essential to good software development
-            I hope everyone can agree on this point
-        </h5>
-        <h5>
-            For those who can't, here are my opinions on testing and
-            maybe by the end you will agree that you are wrong.
-            But for those who agree keep reading, as this is ammunition
-            against those who would otherwise disagree.
-        </h5>
-        <h5>
-            Good tests are good documentation,
-            they tell you the intent of the code.
-            A lot of people struggle on this point.
-            Mainly because they ask, "What is a good test?"
-            It all starts with the naming of a test.
-            Imagine you are writing some code about a football.
-            Now instead of writing "tests" let's just describe it for a moment.
-            It is full of air, it is a sphere, it is made of leather.
-            DONE. Now I argue, each one of those is a perfect test.
-            They tell me exactly everything I need to know and nothing else.
-            They don't tell me for example that I need to pump the ball,
-            or that the ball can be kicked and rolled.
-            They also don't tell me that isASphere returns true or that getContents return AIR.
-            Mainly because if I change the method isASphere, because it is a rubbish name, I do not change a football.
-            Hence I do not need to keep changing my documentation.
-        </h5>
-        <h5>
-            Tests talk. If you haven't listened that's your own fault for writing bad code.
-            They tell you everything you need to know.
-            If you are struggling to write a test it is either because you don't know what it is you want
-            (blame your product owner/user/BA for knowing what they want)
-            or because you have already created a poor design.
-            Unfortunately the later is difficult to detect sometimes until it is too late.
-            Also when you have written a bunch of tests then you realize it is getting harder to write
-            then it can be too late to re-write everything.
-            But you should re-write everything because you have probably written something awful.
-        </h5>
+        <p>Testing is not only <b>GOOD PRACTICE</b> but I am 100% convinced it produces <b>GOOD CODE</b>.</p>
+        <p>One thing which most people for get is that <b>TESTS TALK</b>. This blog is a list that will help you to <b>MAKE TESTS AMAZING</b>. Also it help with things to watch out for and what you need to do when tests tell you something is wrong.</p>
+        <h4>Documentation</h4>
+        <h5>Luke's Inner Monologue</h5>
+        <p>Something</p>
+        <h5>Story Time</h5>
+        <p>Something</p>
+        <h5>Guidelines</h5>
+        <table class="u-full-width">
+            <thead>
+                <th>Good Naming</th>
+                <th>Reason</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Only describe one thing</td>
+                    <td>If they describe more than one thing then your code does more than one thing. Which means your code is too complex.</td>
+                </tr>
+                <tr>
+                    <td>Do not describe implementation</td>
+                    <td>Two reasons wrong when describing implementation. Firstly, the tests are likely to change. Secondly, your code most likely to have very complex logic in it if you are doing this.</td>
+                </tr>
+                <tr>
+                    <td>Are short and to the point</td>
+                    <td>Long winded names indicate to me that you don't know what the problem is you are trying to solve, because of the end of the day if you do TDD, don't think "I am writing tests first", instead thing "I am writing the problem first". Your solution is probably wrong and will most certainly confuse anyone else going to the code.</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         -->
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <h4>Documentation</h4>
+        <h5>Blurb</h5>
+        <p>Tests are the <b>documentation of the code</b>. Imagine having documentation which changes when your code does. Documentation which is green and red hinting whether it is correct or not. That is what tests gives you when you do them correctly</p>
+        <h5>Narrative</h5>
+        <p>Some people complain that tests don't make sense. This is because they have probably adopted a naming convention or something similar which is awful. What I want you to do is imagine you are describing a football (soccer ball?). What would you say and would it be something like this?</p>
+        <p><u>A Football</u>
+            <br/> Filled with air
+            <br/> In the shape of a sphere
+            <br/> Is covered in leather</p>
+        <p>I can't really think of a better way of writing the description of a football. And now I have 3 tests and 1 test suite. This way if I change the implementation then I don't need to change the tests. I only change the tests if they become invalid. For instance I might get a polyester cover on the ball. At which point that test would change it's name to "Is covered in a material".</p>
+        <h5>Guidelines</h5>
+        <table class="u-full-width">
+            <thead>
+                <th>Good Naming</th>
+                <th>Reason</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Only describe one thing</td>
+                    <td>If they describe more than one thing then your code does more than one thing. Which means your code is too complex.</td>
+                </tr>
+                <tr>
+                    <td>Do not describe implementation</td>
+                    <td>Two reasons wrong when describing implementation. Firstly, the tests are likely to change. Secondly, your code most likely to have very complex logic in it if you are doing this.</td>
+                </tr>
+                <tr>
+                    <td>Are short and to the point</td>
+                    <td>Long winded names indicate to me that you don't know what the problem is you are trying to solve, because of the end of the day if you do TDD, don't think "I am writing tests first", instead thing "I am writing the problem first". Your solution is probably wrong and will most certainly confuse anyone else going to the code.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h4>Mocking</h4>
+        <h5>Blurb</h5>
+        <p>When and how to mock has been the source of many heated debates for me. <b>Mocking highlights coupling</b>. This is true when you over are mocking or mocking the wrong thing or mocking at the wrong level of testing. <b>Mocking makes good code</b>. Might be contradictory but keeping your code independent and consistent from outside things is always a good thing.</p>
+        <h5>Narrative</h5>
+        <p>Boop</p>
+        <h5>Guidelines</h5>
+        <table>
+            <thead>
+                <th>Good Mocking</th>
+                <th>Reason</th>
+            </thead>
+        </table>
+        <!--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         -->
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <h5>
             Have you ever had an argument to anyone about mocks and mocking (spies and spying)?
             Probably because you are either doing it wrong or you more likely you have created coupling.
